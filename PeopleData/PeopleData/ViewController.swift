@@ -11,7 +11,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var data = ["Ahmed", "Eslam", "Shifo"]
+    var data = [
+        Person(firstName: "Ahmed", lastName: "Ashraf", gender: "Male", height: 185, age: 25),
+        Person(firstName: "Eslam", lastName: "Ali", gender: "Male", height: 187, age: 25),
+        Person(firstName: "Ahmed", lastName: "Sherif", gender: "Male", height: 173, age: 25),
+        Person(firstName: "Nour", lastName: "Essam", gender: "Male", height: 168, age: 25)
+        
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,7 +33,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row].firstName
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
