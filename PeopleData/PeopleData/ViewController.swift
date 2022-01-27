@@ -16,12 +16,11 @@ class ViewController: UIViewController {
         Person(firstName: "Eslam", lastName: "Ali", gender: "Male", height: 187, age: 25),
         Person(firstName: "Ahmed", lastName: "Sherif", gender: "Male", height: 173, age: 25),
         Person(firstName: "Nour", lastName: "Essam", gender: "Male", height: 168, age: 25)
-        
     ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        tableView.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.cellIdentifier)
     }
 }
 
@@ -32,12 +31,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row].firstName
-        cell.detailTextLabel?.text = String(data[indexPath.row].height)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellIdentifier) as! CustomTableViewCell
+        let data = data[indexPath.row]
+        let viewModel = CellViewModel(firstName: data.firstName, lastName: data.lastName, height: data.height)
+        cell.configure(viewModel: viewModel)
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        70
     }
 }
