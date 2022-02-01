@@ -13,6 +13,8 @@
 		2D6FCCB927A889010040C10A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6FCCB727A889010040C10A /* Main.storyboard */; };
 		2D6FCCBB27A889030040C10A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6FCCBA27A889030040C10A /* Assets.xcassets */; };
 		2D6FCCBE27A889030040C10A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6FCCBC27A889030040C10A /* LaunchScreen.storyboard */; };
+		2D6FCCC827A9D3500040C10A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FCCC727A9D3500040C10A /* APIService.swift */; };
+		2D6FCCCB27A9D3CB0040C10A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FCCCA27A9D3CB0040C10A /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2D6FCCBA27A889030040C10A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D6FCCBD27A889030040C10A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D6FCCBF27A889030040C10A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D6FCCC727A9D3500040C10A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		2D6FCCCA27A9D3CB0040C10A /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		2D6FCCB027A889010040C10A /* MVVM_Proj */ = {
 			isa = PBXGroup;
 			children = (
+				2D6FCCC927A9D3BF0040C10A /* Model */,
+				2D6FCCC527A9D31D0040C10A /* Service */,
 				2D6FCCB127A889010040C10A /* AppDelegate.swift */,
 				2D6FCCB327A889010040C10A /* SceneDelegate.swift */,
 				2D6FCCB527A889010040C10A /* ViewController.swift */,
@@ -65,6 +71,22 @@
 				2D6FCCBF27A889030040C10A /* Info.plist */,
 			);
 			path = MVVM_Proj;
+			sourceTree = "<group>";
+		};
+		2D6FCCC527A9D31D0040C10A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2D6FCCC727A9D3500040C10A /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2D6FCCC927A9D3BF0040C10A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D6FCCCA27A9D3CB0040C10A /* Photo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +162,9 @@
 			files = (
 				2D6FCCB627A889010040C10A /* ViewController.swift in Sources */,
 				2D6FCCB227A889010040C10A /* AppDelegate.swift in Sources */,
+				2D6FCCC827A9D3500040C10A /* APIService.swift in Sources */,
 				2D6FCCB427A889010040C10A /* SceneDelegate.swift in Sources */,
+				2D6FCCCB27A9D3CB0040C10A /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
